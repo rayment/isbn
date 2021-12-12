@@ -5,8 +5,8 @@ isbn - ISBN lookup script
 isbn is a simple Python script that queries the API provided by OpenLibrary
 for book information when provided with a valid SBN, ISBN-10 or ISBN-13 number.
 
-Note that this script is limited to the database provided by OpenLibrary and
-thus there are possibly many entries that do not exist.
+Keep in mind that this script is limited to the database provided by OpenLibrary
+and thus there are possibly many entries that do not exist.
 
 No API key is required as OpenLibrary provides the service free of charge, so
 please be appreciative and do not spam this script.
@@ -16,4 +16,12 @@ the built-in json and urllib are required.
 
 isbn is licensed under BSD 3-Clause.
 All license information is available in the included COPYING file.
+
+usage: isbn.py [-h] isbn
+
+positional arguments:
+  isbn        SBN, ISBN-10 or ISBN-13 number to search
+
+optional arguments:
+  -h, --help  show this help message and exit
 
