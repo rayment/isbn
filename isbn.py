@@ -212,6 +212,7 @@ def print_isbn(isbn, data):
 	isbns = data['isbns']
 	if isbn not in isbns:
 		isbns.append(isbn)
+	isbns = sorted(isbns, key=len)
 	for i in isbns:
 		if len(i) == 9:
 			print('SBN        : ' + i)
