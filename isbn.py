@@ -17,6 +17,8 @@ JUSTIFY = 10
 LINE_LEN = 80 # chars per line
 MAX_SUBJECT_LINES = 3
 
+VERSION = '1.0.0' # make sure to update on version change
+
 LANGS = {
 	'ara': 'Arabic',
 	'chi': 'Chinese',
@@ -40,7 +42,10 @@ LANGS = {
 	'tur': 'Turkish'
 }
 
-argp = argparse.ArgumentParser()
+argp = argparse.ArgumentParser(description='ISBN lookup script')
+argp.add_argument('-v', '--version',
+                  action='version',
+                  version='%(prog)s {}'.format(VERSION))
 argp.add_argument('isbn',
                   help='SBN, ISBN-10 or ISBN-13 number to search',
                   type=str)

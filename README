@@ -17,11 +17,14 @@ the built-in json and urllib are required.
 isbn is licensed under BSD 3-Clause.
 All license information is available in the included COPYING file.
 
-usage: isbn.py [-h] isbn
+usage: isbn.py [-h] [-v] isbn
+
+ISBN lookup script
 
 positional arguments:
-  isbn        SBN, ISBN-10 or ISBN-13 number to search
+  isbn           SBN, ISBN-10 or ISBN-13 number to search
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number and exit
 
