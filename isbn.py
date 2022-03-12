@@ -17,7 +17,7 @@ JUSTIFY = 10
 LINE_LEN = 80 # chars per line
 MAX_SUBJECT_LINES = 3
 
-VERSION = '1.0.0' # make sure to update on version change
+VERSION = '1.0.1' # make sure to update on version change
 
 LANGS = {
 	'ara': 'Arabic',
@@ -75,9 +75,13 @@ def check_isbn(isbn):
 		return False
 
 isbn = sanitise_isbn(args.isbn)
-if (len(isbn) != 10 and len(isbn) != 13) or not check_isbn(isbn):
+if (len(isbn) != 9 and len(isbn) != 10 and len(isbn) != 13) or \
+   not check_isbn(isbn):
 	print('error: not a valid SBN, ISBN-10 or ISBN-13 number')
 	exit(1)
+if len(isbn) == 9:
+	# convert SBN to ISBN-10
+	isbn = '0' + isbn
 
 def fetch_isbn(isbn):
 	try:

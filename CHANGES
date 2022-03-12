@@ -1,6 +1,12 @@
 Changelog for `isbn'
 ====================
 
+v1.0.1
+------
+Released 12/03/2022.
+
+~ Fixed bug that stopped SBN numbers from being detected.
+
 v1.0.0
 ------
 Released 17/01/2022.
